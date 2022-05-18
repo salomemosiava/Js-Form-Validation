@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  background-color: #4c94ff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) skew(0, -10deg);
+  border-radius: 50%;
+  z-index: -1;
+  animation: waving 5s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+  from {
+    transform: translateX(-50%) skew(0, -10deg);
+  }
+  to {
+    transform: translateX(-30%) skew(20deg, 0);
+  }
+}
+
+#registration {
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  position: relative;
+  background: #FFFFFF;
+  max-width: 500px;
+  width: 100%;
+  margin: 128px auto;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#username, #email, #password, #password2 {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  caret-color: #4c94ff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border: none;
+  outline: none; 
+  caret-color: #4c94ff;
+  margin-top: 16px;
+}
+.input:hover {
+  background-color: #bbd6ff2f;
+}
+.fa-solid  {
+  opacity: 40%;
+  cursor: pointer;
+}
+.fa-solid:hover {
+  opacity: 80%;
+}
+.error-text {
+    color: rgb(255, 53, 53);
+    font-style: italic;
+    font-size: 14px;
+}
+
+button {
+  max-width: 360px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #4c94ff;
+  color: white;
+  margin: 16px;
+  transition: all 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+button:hover {
+  transform: scale(1.25, 1.25);
+  cursor: pointer;
+}

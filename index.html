@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://kit.fontawesome.com/0eca0e059b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="POST" id="registration">
+        <div class="input">
+            <input type="text" name="username" placeholder="Username" id="username">
+        </div>
+        <span class="error-text" id="error_username"></span>
+
+        <!-- email validation REGEX -->
+        <div class="input">
+            <input type="email" placeholder="Email" id="email" onkeydown='validateEmail()'>
+        </div>
+        <span class="error-text" id="error_email"></span>
+        <div class="input">
+            <input type="password" name="password" placeholder="Password" id="password">
+            <i id='toggleicon' class="fa-solid fa-eye-slash"></i>
+        </div>
+        <span class="error-text" id="error_password"></span>
+
+        <div class="input">
+            <input type="password" name="password2" placeholder="Repeat Password" id="password2">
+            <i id='toggleicon2' class="fa-solid fa-eye-slash"></i>
+        </div>
+        <span class="error-text" id="error_password2"></span>
+
+        <div class="input">
+            <input type="radio" name="age" id="age1">
+            <label for="age1"> 18 - 35</label>
+            <input type="radio" name="age" id="age2">
+            <label for="age2"> 35 - 50</label>
+            <input type="radio" name="age" id="age3">
+            <label for="age3"> 0 - 18</label>
+        </div>
+        <span class="error-text" id="error_age"></span>
+
+        <div>
+            <input type="checkbox" name="agree" id="checkagree">
+            <label for="checkagree">I agree terms and conditions</label>
+        </div>
+        <span class="error-text" id="error_agree"></span>
+
+        <button type="submit">Send</button>
+</form>
+
+    <script src="script.js"></script>
+</body>
+</html>
