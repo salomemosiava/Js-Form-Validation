@@ -49,7 +49,7 @@ document.getElementById('registration').addEventListener('submit', function(even
     if (Object.keys(errors).length == 0) {
         // form.submit();
         let h1Tag =document.createElement('h1');
-        h1Tag.innerHTML = "Hello, "+username + " I wish you the best day!";
+        h1Tag.innerHTML = "Hello, "+username.toUpperCase() + ", I wish you the best day!";
         form.appendChild(h1Tag);
     }
 });
